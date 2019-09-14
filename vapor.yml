@@ -2,8 +2,11 @@ id: 1475
 name: laravel6
 environments:
     production:
+        warm: 5
         memory: 1024
         cli-memory: 512
+        concurrency: 150
+        domain: laravel6.jolemmens.com
         build:
             - 'composer install --no-dev --classmap-authoritative'
             - 'php artisan event:cache'
